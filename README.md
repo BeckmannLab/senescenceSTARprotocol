@@ -6,19 +6,7 @@ This workflow is adapted from https://github.com/BeckmannLab/brainCellularSenesc
 
 Original study:
 Lund et al. *Establishing the relationship between brain cellular senescence and brain structure.* Cell (2026).  
-
-## Overview
-
-This repository is organized around the same analysis sequence used in the manuscript:
-
-1. Compute continuous senescence scores with AUCell
-2. Apply candidate percentile thresholds within each annotated cell type
-3. Create senescence-labeled pseudobulk profiles by sample
-4. Run senescent vs non-senescent differential expression analysis
-5. Test enrichment of canonical senescence genes among DE genes
-6. Select the optimal threshold for each cell type
-7. Pull together the final output objects
-
+    
 ## Inputs
 
 The workflow expects:
