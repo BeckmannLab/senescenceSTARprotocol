@@ -46,21 +46,3 @@ Successful implementation of this workflow generates:
 2. optimized threshold-based senescence classifications within each annotated cell population
 3. cell type-specific senescence differential expression signatures
 4. estimated proportions of senescent cells for each cell type
-
-
-## Core dependencies
-
-Main R packages used in this workflow:
-
-- Seurat
-- AUCell
-- dreamlet
-- edgeR
-- limma
-- BiocParallel
-- GSEABase
-- dplyr
-- tidyr
-- stringr
-- foreach
-- doParallel
