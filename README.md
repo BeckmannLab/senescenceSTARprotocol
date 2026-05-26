@@ -12,7 +12,7 @@ Lund et al. *Establishing the relationship between brain cellular senescence and
 
 The workflow expects:
 
-- a Seurat object with raw RNA counts (original study has links to datasets)
+- a Seurat object with raw RNA counts
 - cell type annotations
 - sample IDs
 - a curated canonical senescence gene list
