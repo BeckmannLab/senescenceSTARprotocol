@@ -1,5 +1,5 @@
 #16.	Define grid for downstream DE analyses
-folder = "path”
+folder = "path"
 
 cts  = c("Ast","Exc","Int","MG","NonNeu","Oli","OPC")
 ctsl = c("ast","exc","int","mg","noneu","oli","opc")
