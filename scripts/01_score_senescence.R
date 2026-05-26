@@ -1,3 +1,4 @@
+##Preparation
 #1.	Load necessary packages and functions.
 
 library(Seurat)
@@ -43,9 +44,11 @@ geneSets = GeneSet(all_genes, setName = "sen_list")
 
 threshold_grid <- structure(list(percent = c("1percent","1percent","1percent","1percent","1percent","1percent","1percent","5percent","5percent","5percent","5percent","5percent","5percent","5percent","10percent","10percent","10percent","10percent","10percent","10percent","10percent","20percent","20percent","20percent","20percent","20percent","20percent","20percent","30percent","30percent","30percent","30percent","30percent","30percent","30percent"), celltype = c("MG","Exc","Oli","Int","NonNeu","Ast","OPC","MG","Exc","Oli","Int","NonNeu","Ast","OPC","MG","Exc","Oli","Int","NonNeu","Ast","OPC","MG","Exc","Oli","Int","NonNeu","Ast","OPC","MG","Exc","Oli","Int","NonNeu","Ast","OPC"), threshold = c(0.99,0.99,0.99,0.99,0.99,0.99,0.99,0.95,0.95,0.95,0.95,0.95,0.95,0.95,0.90,0.90,0.90,0.90,0.90,0.90,0.90,0.80,0.80,0.80,0.80,0.80,0.80,0.80,0.70,0.70,0.70,0.70,0.70,0.70,0.70)), row.names = c(NA, -35L), class = "data.frame")
 
-#6. Run AUCell to compute continuous senescence activity scores for each cell using a raw gene expression count matrix and a curated senescence gene set. The resulting AUCX2 object contains per-cell AUCell enrichment scores, where higher scores indicate greater senescence-associated gene activity.
+##Step-by-step details [section]
+
+#1. Run AUCell to compute continuous senescence activity scores for each cell using a raw gene expression count matrix and a curated senescence gene set. The resulting AUCX2 object contains per-cell AUCell enrichment scores, where higher scores indicate greater senescence-associated gene activity.
 
 AUCX2 <- AUCell_run(data,geneSets = geneSets,BPPARAM  = BiocParallel::MulticoreParam(30)) #this uses 30 cores on the cluster, for non-parallel processing, use SerialParam()
 
-#7 Save the AUCell object for downstream threshold testing, pseudobulk aggregation, and differential expression analyses. 
+#2 Save the AUCell object for downstream threshold testing, pseudobulk aggregation, and differential expression analyses. 
 saveRDS(AUCX2, "AUCX2_sen_list.rds")
