@@ -1,17 +1,18 @@
 # Cellular Senescence Classification from scRNA-seq/snRNA-seq Data
 
-This repository contains the core analysis workflow used to identify and classify senescent cells, including:
+This repository contains the core analysis workflow used to identify and classify senescent cells.
 
-This workflow is adapted from https://github.com/BeckmannLab/brainCellularSenescenceAndStructure
+This workflow is adapted from https://github.com/BeckmannLab/brainCellularSenescenceAndStructure 
 
 Original study:
 Lund et al. *Establishing the relationship between brain cellular senescence and brain structure.* Cell (2026).  
-    
+
+
 ## Inputs
 
 The workflow expects:
 
-- a Seurat object with raw RNA counts
+- a Seurat object with raw RNA counts (original study has links to datasets)
 - cell type annotations
 - sample IDs
 - a curated canonical senescence gene list
